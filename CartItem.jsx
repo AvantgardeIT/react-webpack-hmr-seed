@@ -18,7 +18,7 @@ export default class CartItem extends React.Component {
         qty: this.props.initialQty,
         total: 0
     };
-    
+
     constructor(props) {
         super(props);
     }
