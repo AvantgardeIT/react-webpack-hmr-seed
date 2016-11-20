@@ -1,14 +1,17 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var DIST_DIR   = path.join(__dirname, "dist"),
+    CLIENT_DIR = path.join(__dirname, "src");
+
 var config = {
     devtool: 'cheap-module-eval-source-map',
     entry: [
-        './app.js',
+        './index.jsx',
         'webpack-hot-middleware/client'
     ],
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: DIST_DIR,
         filename: 'bundle.js',
         publicPath: '/dist/'
     },
@@ -20,7 +23,8 @@ var config = {
     module: {
         loaders: [
             {
-                test: /\.js$/,
+                //test : /\.jsx?/,
+                test: /\.jsx$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 include: __dirname,
