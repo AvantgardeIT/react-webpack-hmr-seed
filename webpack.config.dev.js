@@ -1,8 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 
-var DIST_DIR   = path.join(__dirname, "dist"),
-    CLIENT_DIR = path.join(__dirname, "src");
+var DIST_DIR   = path.join(__dirname, "dist");
 
 var config = {
     devtool: 'cheap-module-eval-source-map',
