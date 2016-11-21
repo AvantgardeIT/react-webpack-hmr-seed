@@ -26,7 +26,6 @@ export default class Counter extends Component {
     render() {
         const { counter } = this.state;
 
-        // <div>Webpack is doing its thing with React and ES2015</div>
         return (
             <header>
                 <div><b>Webpack HMR example:</b></div>

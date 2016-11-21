@@ -7,6 +7,10 @@ React and ES6 with Webpack
 * Run `npm start`
 * Open `http://localhost:3000` in your browser
 
+## Development use
+
+* Run `npm start`
+
 ## Production use
 
 * npm run build
