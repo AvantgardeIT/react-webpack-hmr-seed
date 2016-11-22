@@ -1,6 +1,6 @@
 import React from 'react';
-import CartItem from './../CartItem/CartItem.jsx';
-import Counter from './../Counter/Counter.jsx';
+import CartItem from './../CartItem/CartItem.js';
+import Counter from './../Counter/Counter.js';
 
 export default class App extends React.Component {
 
