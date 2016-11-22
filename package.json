@@ -26,7 +26,7 @@
     "babel-preset-stage-0": "6.5.0",
     "css-loader": "0.23.1",
     "express": "4.13.4",
-    "rimraf": "2.5.2",
+    "rimraf": "2.5.4",
     "webpack": "1.12.14",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.10.0"
@@ -37,7 +37,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build:webpack": "NODE_ENV=production webpack --progress --colors --config webpack.config.prod.js",
+    "build:webpack": "webpack --progress --colors --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "node server.js"
   }
