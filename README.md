@@ -1,5 +1,5 @@
 
-React and ES6 with Webpack
+Seed project for React apps using ES6, Webpack and HMR.
 
 ## How to install
 
@@ -13,4 +13,4 @@ React and ES6 with Webpack
 
 ## Production use
 
-* npm run build
+* Run `npm run build`
