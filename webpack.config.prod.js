@@ -1,14 +1,17 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var DIST_DIR   = path.join(__dirname, "dist");
+
 var config = {
-    devtool: 'source-map',
+    devtool: 'cheap-module-source-map',
     entry: [
-        './app.js'
+        './index.js'
     ],
     output: {
-        path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js'
+        path: DIST_DIR,
+        filename: 'bundle.js',
+        publicPath: '/dist/'
     },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
@@ -27,8 +30,12 @@ var config = {
         loaders: [
             {
                 test: /\.js$/,
-                loaders: ['babel'],
-                exclude: /node_modules/
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                include: __dirname,
+                query: {
+                    presets: [ "es2015", "react", "stage-0" ]
+                }
             }
         ]
     }

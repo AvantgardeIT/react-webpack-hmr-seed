@@ -4,9 +4,10 @@ var webpack = require('webpack');
 var DIST_DIR   = path.join(__dirname, "dist");
 
 var config = {
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval', // generated code but faster
+    //devtool: 'cheap-module-eval-source-map', // original source but slower
     entry: [
-        './index.jsx',
+        './index.js',
         'webpack-hot-middleware/client'
     ],
     output: {
@@ -22,8 +23,7 @@ var config = {
     module: {
         loaders: [
             {
-                //test : /\.jsx?/,
-                test: /\.jsx$/,
+                test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 include: __dirname,
